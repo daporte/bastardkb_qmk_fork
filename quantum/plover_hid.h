@@ -1,4 +1,4 @@
-/* Copyright 2021 duoshock
+/* Copyright 2021 dnaq
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,11 +16,5 @@
 
 #pragma once
 
-#define SPLIT_USB_DETECT
-#define SPLIT_MODS_ENABLE
-
-#define AUDIO_PIN B6
-
-#ifdef AUDIO_ENABLE
-  #define STARTUP_SONG SONG(STARTUP_SOUND)
-#endif
+void plover_hid_update(uint8_t button, bool pressed);
+void plover_hid_task(void);

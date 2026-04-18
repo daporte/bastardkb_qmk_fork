@@ -1,4 +1,4 @@
-/* Copyright 2021 duoshock
+/* Copyright 2021 dnaq
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,13 +14,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#include "process_plover_hid.h"
+#include "plover_hid.h"
 
-#define SPLIT_USB_DETECT
-#define SPLIT_MODS_ENABLE
-
-#define AUDIO_PIN B6
-
-#ifdef AUDIO_ENABLE
-  #define STARTUP_SONG SONG(STARTUP_SOUND)
-#endif
+bool process_plover_hid(uint16_t keycode, keyrecord_t *record) {
+    if (!IS_QK_PLOVER_HID(keycode)) {
+        return true;
+    }
+    plover_hid_update(keycode - QK_PLOVER_HID, record->event.pressed);
+    return false;
+}
