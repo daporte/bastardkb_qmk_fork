@@ -1,12 +1,15 @@
 # TBK Mini
 
-A split, compact ergonomic keyboard.
+* Keyboard Maintainer: [Quentin Lebastard](https://github.com/bastardkb)
+* Hardware Supported: BastardKB Blackpill or Pro Micro adapter & compatible development boards
+* Hardware Availability: [GitHub](https://github.com/Bastardkb/TBK-Mini)
 
 * Keyboard Maintainer: [Bastard Keyboards](https://github.com/Bastardkb/)
 * Hardware Supported: Splinky v3, Splinktegrated
 * Hardware Availability: [Bastardkb.com](https://bastardkb.com/)
 
-## Building the firmware
+    make bastardkb/tbkmini/blackpill:default
+    make bastardkb/tbkmini/promicro:default
 
 For instructions on how to build your firmware, please see https://docs.bastardkb.com/fw/compile-firmware.html
 

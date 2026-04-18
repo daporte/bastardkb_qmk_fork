@@ -1,4 +1,5 @@
 {
+    "url": "https://github.com/Bastardkb/Charybdis",
     "rgb_matrix": {
         "animations": {
             "alphas_mods": true,
@@ -52,6 +53,7 @@
         "sleep": true
     },
     "split": {
+        "enabled": true,
         "transport": {
             "sync": {
                 "matrix_state": true
